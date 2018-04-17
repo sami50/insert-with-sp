@@ -16,8 +16,13 @@ namespace Webwithsp
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "products", action = "order", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+               name: "my",
+               url: "{products}/{sp1}",
+               defaults: new { controller = "products", action = "sp1", id = UrlParameter.Optional }
+           );
         }
     }
 }
